@@ -15,6 +15,7 @@
         </div>    
     </div>
 
+  
 
 
 <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
@@ -31,7 +32,7 @@
             <span class="font-bold italic text-gray-800">
                 By Nurik
 
-            </span>, 1 day ago
+            </span>, {{date('Y-m-d')}}
         </span>
         <p class="py-8 text-gray-500 text-l">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -97,7 +98,7 @@
       
     </div>
     <div>
-        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="500" height="700" alt="#">
+        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="600" height="900" alt="#">
     </div>
 
 </div>

@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
-use Posts;
+use Cviebrock\EloquentSluggable\Services\SlugService;
+
+
 
 class PostsController extends Controller
 {
@@ -16,7 +18,6 @@ class PostsController extends Controller
      */
     public function index()
     {
-        
         
         return view ('blog.index')->with('posts', Post::orderBy('updated_at', 'DESC')->get());
         // ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
@@ -30,18 +31,39 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('blog.create');
     }
 
     /**
      * Store a newly created resource in storage.
+     * @return \Illuminate\Http\Response
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' =>'required',
+            'image'=>'required|mimes:jpg,png,jpeg|max:5048'
+        ]);
+
+        $newimageName = uniqid(). '-' . $request->title . '.' .
+        $request->image->extension();
+
+        $request->image->move(public_path('images'), $newimageName);  
+        
+        
+        
+        Post::create([
+            'title' =>$request -> input('title'),
+            'description' => $request->input('description'),
+            'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
+            'image_path' => $newimageName,
+            'user_id' => auth()->user()->id
+        ]);
+
+        return redirect('/blog')->with('message', 'Ur post has been added!');
     }
 
     /**

@@ -12,7 +12,7 @@
 
 @if (session()->has('message'))
     <div class="w-4/5 m-auto mt-10 pl-2">
-        <p class="w-1/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4"> {{session()->get('message')}}
+        <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4"> {{session()->get('message')}}
         </p>
     </div>
 @endif
@@ -49,6 +49,25 @@
             {{ $post->description }}
         </p>
         <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">Keep Reading</a>
+
+        @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
+            <span class="float-right">
+                <a href="/blog/{{ $post->slug}}/edit"
+                   class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2"> Edit
+
+                </a>
+            </span>
+
+            <span class="float-center pl-20">
+                <a href="/blog/{{$post->slug}}/delete" class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">Delete</a>
+
+            </span>
+       
+            
+        @endif
+
+       
+
     </div>
     </div>
 @endforeach

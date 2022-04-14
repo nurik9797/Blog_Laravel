@@ -18,9 +18,9 @@
   
 
 
-<div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+<div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200 ">
     <div>
-        <img src="https://images.unsplash.com/photo-1562669765-28efdc617c80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" width="600" alt="#">
+        <img src="https://images.unsplash.com/photo-1562669765-28efdc617c80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" width="600" alt="#" class="rounded-full">
     </div>
 
     <div class="m-auto sm:m-auto text-left w-4/5 block">
@@ -81,24 +81,24 @@
 
 </div>
 
-<div class="sm:grid grid-cols-2 w-4/5 m-auto">
-    <div class="flex bg-yellow-700 text-gray-100 pt-10">
+<div class="sm:grid grid-cols-1 w-4/5 m-auto">
+    <div class="flex bg-yellow-700 text-gray-100 pt-10 rounded-2xl mb-2">
         <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5">
             <span class="uppercase text-xs"> 
                 Breaking news
             </span>
-                <h3 class="text-xl font-bold py-10">
+                <h3 class="text-xl font-bold py-7">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ducimus velit sequi quis maiores consectetur?
                 </h3>
             
-                <a href="" class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
+                <a href="" class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5  rounded-3xl">
                     Find Out More
                 </a>
         </div>
       
     </div>
-    <div>
-        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="600" height="900" alt="#">
+    <div >
+        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"  alt="/" height= 400 class="rounded-2xl center-center">
     </div>
 
 </div>

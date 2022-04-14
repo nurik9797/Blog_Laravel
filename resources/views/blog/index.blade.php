@@ -58,8 +58,19 @@
                 </a>
             </span>
 
-            <span class="float-center pl-20">
-                <a href="/blog/{{$post->slug}}/delete" class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">Delete</a>
+            <span class="float-right">
+                <form 
+                    action="/blog/{{$post->slug}}"
+                    method ="POST">
+                    @csrf
+                    @method('delete')
+
+                    <button 
+                        class="text-red-600 pr-3"
+                        type="submit">Delete
+
+                    </button>
+                </form>
 
             </span>
        

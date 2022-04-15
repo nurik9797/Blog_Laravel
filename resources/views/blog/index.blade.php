@@ -29,12 +29,12 @@
 
 @foreach ($posts as $post)
 
-    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+    <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200 ">
         <div>
-            <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="500" height="700" alt="#">
+            <img src="{{asset('images/' . $post->image_path)}}" class="rounded-3xl " alt="#">
         </div>
      <div>
-        <h2 class="text-gray-700 font bold text-5xl pb-4">
+        <h2 class="text-gray-700 font bold text-5xl pb-4 pt-25">
             Let's get information about..
             {{ $post->title }}
         </h2>
